@@ -31,10 +31,10 @@ enableEmoji = false
 footnoteReturnLinkContents = "↩"
 
 # 是否启用 Git 版本信息
-enableGitInfo = false
+enableGitInfo = true
 
 # 是否生成 robots.txt 文件
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
 paginate = 5
@@ -113,9 +113,9 @@ uglyURLs = false
     threshold = 80
     includeNewer = true
     toLower = true
-    [[related.indices]]
-        name = "categories"
-        weight = 100
+    # [[related.indices]]
+      #  name = "categories"
+      #  weight = 100
     [[related.indices]]
         name = "tags"
         weight = 95
@@ -201,30 +201,65 @@ uglyURLs = false
         weight = 1
         pre = "internal"
         post = "archive"
+        identifier = "life"
     [[menu.main]]
         pageref = "/tech/"
         name = "技术"
         weight = 2
         pre = "internal"
-        post = "th"
+        post = "wpexplorer"
+        identifier = "tech"
     [[menu.main]]
         pageref = "/about/"
         name = "关于"
         weight = 3
         pre = "internal"
         post = "user-circle"
-    [[menu.main]]
-        weight = 4
-        identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 5
-        identifier = "lang-switcher"
+        identifier = "about"
+  #  [[menu.main]]
+   #     weight = 4
+    #    identifier = "theme-switcher"
+   # [[menu.main]]
+    #    weight = 5
+     #   identifier = "lang-switcher"
     # [[menu.main]]
     #     weight = 8
     #     identifier = "search"
     #     post = "search"
 
+    ## 社交栏
+    [[menu.socials]]
+        url = "https://github.com/anshy7"
+        name = "GitHub"
+        weight = 1
+        pre = "external"
+    [[menu.socials]]
+        url = "https://t.me/anshy77"
+        name = "Telegram"
+        weight = 2
+        pre = "external"
+   # [[menu.socials]]
+   #     url = "https://reuixiy.notion.site/2f10796bae1a4bddb1276a51d3f2118d"
+   #     name = "Others"
+   #     weight = 3
+   #     pre = "external"
 
+    ## 链接栏
+    [[menu.links]]
+        pageref = "/"
+        name = "Home"
+        weight = 1
+        pre = "internal"
+ #   [[menu.links]]
+ #       pageref = "/tags/"
+ #       name = "Tags"
+ #       weight = 2
+ #       pre = "internal"
+ #   [[menu.links]]
+ #       pageref = "/coldplay/"
+ #       name = "Coldplay"
+ #       weight = 3
+ #       pre = "internal"
 
 ##########################################
 # 主题配置
@@ -272,7 +307,7 @@ uglyURLs = false
     # 如果否，则会使用你的站点标题作为默认值，并
     # 以文字的形式显示，下方可配置字号和字色。字
     # 体请到底部的字体部分配置。单位：em。
-    siteBrandFontSize = 1
+    siteBrandFontSize = 2
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -303,11 +338,11 @@ uglyURLs = false
     # 3. posts     文章摘要
     # 4. page      普通页面
 
-    homeLayout = "posts"
+    homeLayout = "poetry"
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = []
+    homePoetry = ["谁终将声震人间", "必长久深自缄默", "谁终将点燃闪电", "必长久如云漂泊"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
@@ -337,7 +372,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
+    siteDescription = "这是 Anshy 的生活和技术博客，欢迎到来，诸君请坐......"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -419,7 +454,7 @@ uglyURLs = false
     displayListTitle = true
 
     # 日期的格式
-    listDateFormat = "1 月 2 日"
+    listDateFormat = "2023-11-28"
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
@@ -427,15 +462,15 @@ uglyURLs = false
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
-    groupByMonth = true
+    groupByMonth = false
 
     # 是否开启十二生肖
     chineseZodiac = true
 
     # 是否翻译年份（仅对年份标题有效）
-    i18nYear = true
+    i18nYear = false
     # 是否翻译月份（仅对月份标题有效）
-    i18nMonth = true
+    i18nMonth = false
 
 
     ######################################
